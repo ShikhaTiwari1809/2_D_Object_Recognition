@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(image)
+find_package(OpenCV REQUIRED)
+add_executable(object object_recognition.cpp tasks.h tasks.cpp csv_utils.h csv_utils.cpp)
+target_link_libraries(object  ${OpenCV_LIBS})
